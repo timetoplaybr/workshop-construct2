@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable comment="0 - preto / 1 - azul / 2 - vermelho" constant="0" name="CorAtual" sid="333382323145479" static="0" type="number">0</variable>
+        <variable comment="cor dos blocos" constant="0" name="CorSorteada" sid="913341668230150" static="0" type="number">0</variable>
+        <variable comment="pontuação do jogador" constant="0" name="Pontuacao" sid="814553845475673" static="0" type="number">0</variable>
+        <event-block sid="427301244680365">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="944742096226571" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="823018611214872" type="Jogador">
+                    <param id="0" name="X">mouse.X</param>
+                </action>
+                <action id="-17" name="Move forward" sid="242025226761991" type="Bloco">
+                    <param id="0" name="Distance">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="397616600832414">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="398635407242861" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="620473828618594" type="System">
+                    <param id="0" name="Variable">CorAtual</param>
+                    <param id="1" name="Value">CorAtual + 1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="608373266056392">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="913279903542332" type="System">
+                            <param id="0" name="Variable">CorAtual</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Jogador.AnimationFrameCount</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="318970893836072" type="System">
+                            <param id="0" name="Variable">CorAtual</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="334318661757986" type="Jogador">
+                            <param id="0" name="Frame number">CorAtual</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635211030743774">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="775050759974318" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="126541595683505" type="Jogador">
+                            <param id="0" name="Frame number">CorAtual</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="778502047960693">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="701972048274383" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="775871541710514" type="System">
+                    <param id="0" name="Object to create">Bloco</param>
+                    <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                    <param id="2" name="X">random(32, WindowWidth-32)</param>
+                    <param id="3" name="Y">18</param>
+                </action>
+                <action id="-9" name="Set value" sid="725126416592859" type="System">
+                    <param id="0" name="Variable">CorSorteada</param>
+                    <param id="1" name="Value">int(random(Bloco.AnimationFrameCount))</param>
+                </action>
+                <action id="5" name="Set frame" sid="217663777453093" type="Bloco">
+                    <param id="0" name="Frame number">CorSorteada</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="405239312073059">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="387964041057135" type="Bloco" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="752557633949304">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="549112181182648" type="Bloco">
+                    <param id="0" name="Object">Jogador</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="233618152123623" type="Bloco">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">CorAtual</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="944273438063157" type="Bloco" />
+                <action id="-9" name="Set value" sid="868504790149142" type="System">
+                    <param id="0" name="Variable">Pontuacao</param>
+                    <param id="1" name="Value">Pontuacao + 1</param>
+                </action>
+                <action id="0" name="Set text" sid="822138057736770" type="Pontuação">
+                    <param id="0" name="Text">Pontuacao</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="600827275825015">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="740224879598683" type="Bloco">
+                    <param id="0" name="Object">Jogador</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="984327652465253" type="Bloco">
+                    <param id="0" name="Comparison">1</param>
+                    <param id="1" name="Number">CorAtual</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="340396968043432" type="Jogador" />
+                <action id="-16" name="Wait" sid="346465407394379" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="654344073894246" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="359545582328540">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="883764184204263" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="752564885941810" type="Bloco" />
+                <action id="-21" name="Reset global variables" sid="834909838982406" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="209537350755024">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="905967581076489" type="Bloco">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">WindowHeight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="772166121998599" type="Bloco" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
