@@ -3,10 +3,10 @@
     <name>Catch Colors</name>
     <description>Demo para o Workshop de C2 na Faculdade Bilac</description>
     <version>1.0.0.0</version>
-    <author></author>
-    <author-email></author-email>
-    <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <author>Diego Martins de Pinho</author>
+    <author-email>contato@timedoplay.com.br</author-email>
+    <author-website>http://timetoplay.com.br</author-website>
+    <app-id>com.timetoplay.catchcolors</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
@@ -40,7 +40,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
