@@ -1,7 +1,7 @@
 # workshop-construct2
 Repositório de apoio ao workshop de C2 na Faculdade Bilac.
 
-![screenshot do jogo](catch-blocks.jpg)
+![screenshot do jogo](catch-colors.jpg)
 
 ## Jogo
 O jogo que vamos construir é o básico, porém divertido, _Catch Blocks_. O jogador é encarregado de pegar todas as cores que estão no céu, no entanto, para que isso sejá possível, é necessário que ele esteja com a mesma cor que a peça.

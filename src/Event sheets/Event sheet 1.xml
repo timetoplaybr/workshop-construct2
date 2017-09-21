@@ -30,6 +30,12 @@
                     <param id="0" name="Variable">CorAtual</param>
                     <param id="1" name="Value">CorAtual + 1</param>
                 </action>
+                <action id="0" name="Play" sid="976857970172499" type="Audio">
+                    <param id="0" name="Audio file">TROCA</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;TROCA&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="608373266056392">
@@ -72,7 +78,7 @@
                 <action id="-3" name="Create object" sid="775871541710514" type="System">
                     <param id="0" name="Object to create">Bloco</param>
                     <param id="1" name="Layer">&quot;Layer 0&quot;</param>
-                    <param id="2" name="X">random(32, WindowWidth-32)</param>
+                    <param id="2" name="X">random(32, 822)</param>
                     <param id="3" name="Y">18</param>
                 </action>
                 <action id="-9" name="Set value" sid="725126416592859" type="System">
@@ -109,6 +115,12 @@
                 <action id="0" name="Set text" sid="822138057736770" type="Pontuação">
                     <param id="0" name="Text">Pontuacao</param>
                 </action>
+                <action id="0" name="Play" sid="455776471532173" type="Audio">
+                    <param id="0" name="Audio file">ACERTO</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;ACERTO&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="600827275825015">
@@ -123,6 +135,12 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="340396968043432" type="Jogador" />
+                <action id="0" name="Play" sid="341504625520741" type="Audio">
+                    <param id="0" name="Audio file">ERRO</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;ERRO&quot;</param>
+                </action>
                 <action id="-16" name="Wait" sid="346465407394379" type="System">
                     <param id="0" name="Seconds">3.0</param>
                 </action>
@@ -136,6 +154,12 @@
             <actions>
                 <action id="-9" name="Destroy" sid="752564885941810" type="Bloco" />
                 <action id="-21" name="Reset global variables" sid="834909838982406" type="System" />
+                <action id="0" name="Play" sid="146403156952256" type="Audio">
+                    <param id="0" name="Audio file">MUSICA</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;MUSICA&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="209537350755024">

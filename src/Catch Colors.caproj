@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -83,6 +84,9 @@
         <object-type name="Keyboard" sid="129798573418703">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="Audio" sid="848116844328973">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -94,9 +98,33 @@
     <global-instances>
         <global-instance type="Mouse" uid="2" />
         <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Audio" uid="5">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="ACERTO.m4a" />
+        <file name="ACERTO.ogg" />
+        <file name="ERRO.m4a" />
+        <file name="ERRO.ogg" />
+        <file name="TROCA.m4a" />
+        <file name="TROCA.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="MUSICA.m4a" />
+        <file name="MUSICA.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
