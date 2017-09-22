@@ -90,12 +90,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="405239312073059">
-            <conditions>
-                <condition id="-3" name="Is on-screen" sid="387964041057135" type="Bloco" />
-            </conditions>
-            <actions />
-        </event-block>
         <event-block sid="752557633949304">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="549112181182648" type="Bloco">
